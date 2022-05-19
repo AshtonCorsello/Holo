@@ -110,9 +110,9 @@
             "camPos_x": "0.10295413461912174",
             "camPos_y": "4.149198919210184",
             "camPos_z": "4.095552316231586",
-            "mp4": "UploadedFiles/B_K_discuss.mp4",
+            "mp4": "../UploadedFiles/B_K_discuss.mp4",
             "name": "ashton",
-            "png": "UploadedFiles/B_K_discuss.png",
+            "png": "../UploadedFiles/B_K_discuss.png",
             "pos_x": "0",
             "pos_y": "4",
             "pos_z": "5.3",
@@ -120,7 +120,23 @@
             "rot_y": "180",
             "rot_z": "262",
             "scalar": "2.032",
-            "txt": "UploadedFiles/B_K_discuss.txt"
+            "txt": "../UploadedFiles/B_K_discuss.txt"
+        },
+        {
+            "camPos_x": "-5.3488667921097806",
+            "camPos_y": "1.8717688210943098",
+            "camPos_z": "1.3733555696339041",
+            "mp4": "../UploadedFiles/B_K_discuss_update.mp4",
+            "name": "0987",
+            "png": "../UploadedFiles/B_K_discuss.png",
+            "pos_x": "0",
+            "pos_y": "0",
+            "pos_z": "0",
+            "rot_x": "180",
+            "rot_y": "268",
+            "rot_z": "249",
+            "scalar": "2.344",
+            "txt": "../UploadedFiles/B_K_discuss.txt"
         }
     ]
 }

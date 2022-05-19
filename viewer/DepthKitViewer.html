@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+	<!--Three-->
+	<script src="/src/node_modules/three/build/three.js"></script>
+
+	<!--Orbit Controls-->
+	<script src="/src/node_modules/depthkit/examples/lib/OrbitControls.js"></script>
+
+	<!--DepthKit-->
+	<script src="/src/node_modules/depthkit/build/depthkit.js"></script>
+
+	<!--jquery & jquery form submit-->
+	<script src="/src/node_modules/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+	
+	<!--Requirejs-->
+	<script src="/src/node_modules/requirejs/require.js"></script>
+
+	<!--XRI banner-->
+	<img src="/src/img/xri.png" id="KSUbanner">
+	
+	<!--All text and buttons-->
+	<div class="start">
+		<button id="startBtn" style="background-color:#1B75CA">Display Animation</button>
+		<label id="message">Welcome! <br> Please select the DepthKit file you would like to view from the dropdown menu below. <br>Press Display Animation when ready to begin. <br></label>
+		<label for="Select-Files" id="dropdownLabel">Select file to view:</label>
+	<select name="Select-Files" id="DropdownSelect">
+		<option value"null">None</option>
+	</select>
+		<button id="admin">Admin</button>
+	</div>
+
+	<!--Main JS script-->
+    <script type="module" src="/src/js/DKV.js"></script>
+	

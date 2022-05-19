@@ -85,6 +85,12 @@
             "name": "ashton",
             "png": "UploadedFiles/B_K_discuss.png",
             "txt": "UploadedFiles/B_K_discuss.txt"
+        },
+        {
+            "mp4": "../UploadedFiles/B_K_discuss_update.mp4",
+            "name": "0987",
+            "png": "../UploadedFiles/B_K_discuss.png",
+            "txt": "../UploadedFiles/B_K_discuss.txt"
         }
     ]
 }

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "nodejs": "^0.0.0",
+    "requirejs": "^2.3.6"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^4.0.0"
+  }
+}

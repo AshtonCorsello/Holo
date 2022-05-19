@@ -1,71 +1,26 @@
 <head>
-
-    <style>
-
-        .SLIDERS {
-            position:fixed; 
-            top:20%;
-            left: 5px; 
-            margin: auto; 
-            display:inline-block; 
-        }
-
-        .classdelete {
-            position:fixed;
-            left: 10%;
-            bottom: 5%;
-            margin:auto; 
-        }
-
-        .UploadArea {
-            position: fixed; 
-            left: 40%; 
-            bottom: 5%; 
-        }
-
-        #canvas {
-            width: 1000px;
-            height: 500px;
-            margin: 100px;
-            padding: 0px;
-            position: fixed; /* fixed or static */
-            top: 10px;
-            left: 200px;
-        }
-
-
-    </style>
-
+    <link rel="stylesheet" href="admin.css">
 </head>
-<div id="canvas">
-<div class="UploadArea">
-    <h2>ADD FILES:</h2>
-    <p>Choose the files you would like to upload and click "upload". Then, click Display Animation and adjust the sliders and camera until object is properly placed. Click save to save the configuration.</p>
-    <form id="filesub">
-        <label for="fileSelect">Choose file to upload: </label>
-        <input type="file" name="File[]" id="fileSelect" multiple>
-        <input type="submit" name="submit" value="Upload">
-    </form>
-    <form id ="adminToMain">
-        <button type="button" id = "save" name="save" value="save">Save</button>
-    </form>
-</div>
 
-<script src="src/node_modules/jquery.js"></script>
+
+<!--jquery & jquery submit form-->
+<script src="/src/node_modules/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+
 <!--Three-->
-<script src="src/node_modules/three/build/three.js"></script>
-<script type="module" src="src/node_modules/three/examples/jsm/exporters/GLTFExporter.js"></script>
+<script src="/src/node_modules/three/build/three.js"></script>
+
 <!-- Orbit Controls -->
-<script src="src/node_modules/depthkit/examples/lib/OrbitControls.js"></script>
+<script src="/src/node_modules/depthkit/examples/lib/OrbitControls.js"></script>
+
 <!--DepthKit-->
-<script src="src/node_modules/depthkit/build/depthkit.js"></script>
+<script src="/src/node_modules/depthkit/build/depthkit.js"></script>
 
-<script src="src/node_modules/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+<!--requirejs-->
+<script src="/src/node_modules/requirejs/require.js"></script>
 
-<script src="src/node_modules/requirejs/require.js"></script>
 
+<!--Delete files area & form-->
 <div class="start">
     <div class = "classdelete">
         <h2>DELETE FILES:</h2>
@@ -79,6 +34,22 @@
     </div>
 </div>
 
+<!--Upload-->
+<div id="canvas">
+    <div class="UploadArea">
+        <h2>ADD FILES:</h2>
+        <p>Choose the files you would like to upload and click "upload". Then, click Display Animation and adjust the sliders and camera until object is properly placed. Click save to save the configuration.</p>
+        <form id="filesub">
+            <label for="fileSelect">Choose file to upload: </label>
+            <input type="file" name="File[]" id="fileSelect" multiple>
+            <input type="submit" name="submit" value="Upload">
+        </form>
+        <form id ="adminToMain">
+            <button type="button" id = "save" name="save" value="save">Save</button>
+        </form>
+    </div>
+
+<!--Adjustment sliders-->
 <div class = "Sliders">
     <div class="rangeslider" id = "Xslider">
         <p>X Axis Rotation: <span id="XaxisSliderOutput"></span></p>
@@ -118,4 +89,5 @@
     <button id="startBtn" style="background-color:#84f14e">Display Animation</button>
 </div>
 
+<!--Main JS script-->
 <script type="module" src="/src/js/admin.js"></script>

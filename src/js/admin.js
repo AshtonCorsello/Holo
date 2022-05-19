@@ -270,7 +270,7 @@ $('#save').on('click', function(Save_New) {
         data: {Function : "save", data : {xaxis : xaxisval, yaxis: yaxisval, zaxis : zaxisval, 
                scalar : scalarval, xpos : xposval, ypos : yposval, 
                zpos : zposval, camx : camx, camy : camy, camz : camz}},
-        url: "src/srv/handlerCaller.php",
+        url: "/src/srv/handlerCaller.php",
         success: response => {
             location.reload(); 
         }
@@ -288,7 +288,7 @@ $('#Delete').on('click', function(Delete_File) {
                 type: "POST",   
                 dataType: "text",
                 data: {Function : "delete", File : selectedFileForDeletion.value},
-                url: "src/srv/handlerCaller.php",
+                url: "/src/srv/handlerCaller.php",
                 success: response => {
                     location.reload(); 
                 }
@@ -308,7 +308,7 @@ $('#filesub').on('submit', function(Up_To_Server) {
             type: "POST",
             dataType: "text",
             data: {Function : "upload", data : name},
-            url: "src/srv/handlerCaller.php",
+            url: "/src/srv/handlerCaller.php",
             success: response => {
                 console.log(response); 
             }

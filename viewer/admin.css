@@ -1,0 +1,30 @@
+.SLIDERS {
+    position:fixed; 
+    top:20%;
+    left: 5px; 
+    margin: auto; 
+    display:inline-block; 
+}
+
+.classdelete {
+    position:fixed;
+    left: 10%;
+    bottom: 5%;
+    margin:auto; 
+}
+
+.UploadArea {
+    position: fixed; 
+    left: 40%; 
+    bottom: 5%; 
+}
+
+#canvas {
+    width: 1000px;
+    height: 500px;
+    margin: 100px;
+    padding: 0px;
+    position: fixed;
+    top: 10px;
+    left: 200px;
+}

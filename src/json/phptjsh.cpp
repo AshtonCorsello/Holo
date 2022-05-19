@@ -113,9 +113,9 @@ int File::Add_To_Temp_Config() const{
 
     json newVid = {
         {"name", name},
-        {"txt", "UploadedFiles/"+txt},
-        {"mp4", "UploadedFiles/"+mp4},
-        {"png", "UploadedFiles/"+png}
+        {"txt", "../UploadedFiles/"+txt},
+        {"mp4", "../UploadedFiles/"+mp4},
+        {"png", "../UploadedFiles/"+png}
     };
 
     json curFile; 
@@ -189,9 +189,9 @@ int File::Save_To_Main_Config() const {
 
     json finalConfig = {
         {"name", name},
-        {"txt", "UploadedFiles/"+txt},
-        {"mp4", "UploadedFiles/"+mp4},
-        {"png", "UploadedFiles/"+png},
+        {"txt", "../UploadedFiles/"+txt},
+        {"mp4", "../UploadedFiles/"+mp4},
+        {"png", "../UploadedFiles/"+png},
         {"rot_x", configs[0]},
         {"rot_y", configs[1]},
         {"rot_z", configs[2]},

@@ -168,7 +168,7 @@ var admin = document.getElementById("admin");
 admin.addEventListener("click", pagejump => {
 
     var passwd = prompt("Enter password"); 
-    if (passwd == "xrikentu") {
+    if (passwd == "password") {
         location.assign("admin.html")
     }
     else if (passwd === null || passwd == "") {
