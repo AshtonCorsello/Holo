@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<style>
+		body {
+			background-attachment: fixed;
+			background: rgb(255, 255, 255);
+			color: rgb(0, 0, 0);
+			padding-top: 7%; 
+			margin: 0;
+			overflow: hidden; 
+			font-family: georgia;
+			text-align: center;
+		}
+
+		a {
+			color: skyblue;
+			text-decoration: none
+		}
+
+		#info {
+			position: absolute;
+			width: 100%;
+			margin:0px; 
+			padding:0px; 
+		
+		}
+		#depthkit-video{
+			position:absolute;
+			top: 0; left: 0;
+			width: 20%;
+		}
+
+		#message {
+			text-align: center; 
+			font-size: auto; 
+			overflow: hidden;
+			margin-left:auto; 
+			margin-right:auto;
+			padding:0px; 
+		}
+
+		#startBtn {
+			position:absolute;
+			right:38%;
+			top: 65%;
+			padding:0.3em 1.2em;
+			margin:0 0.1em 0.1em 0;
+			border:0.16em solid #1B75CA;
+			border-radius:2em;
+			box-sizing: border-box;
+			text-decoration:none;
+			font-family:'Roboto',sans-serif;
+			font-weight:300;
+			color: #ffffff;
+			text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+			text-align:center;
+			transition: all 0.2s;
+		}
+
+		#FileSubmit {
+			position:fixed; 
+			top: 50px; right: 150px; 
+			overflow: hidden;
+			margin:0px; 
+			padding:0px; 
+		}
+		
+
+		#KSUbanner {
+			
+			position:absolute; 
+			left: 5px; 
+			top: 1%; 
+			width: 25%; 
+			height: 20%; 
+			overflow: hidden;
+			margin: 0; 
+			padding: 0px;
+
+		}
+
+		#dropdownLabel {
+			text-align:center;
+			overflow: hidden; 
+			margin: 0%;
+			display:inline-block;
+			padding:0px; 
+
+		}
+		#DropdownSelect {
+			overflow: hidden;
+			margin: 0%;
+			display: inline-block;
+			padding:0px; 
+		}
+		.start {
+			position:absolute;
+			width:100%;
+			top:0px;
+			margin: 0px; 
+		}
+
+		#admin {
+			position:relative; 
+			right:-40%;
+			width: 100px; 
+			height: 50px; 
+			top: -50px; 
+		}
+
+	</style>
+</head>
+
+
+
+<body>
+
+	<!--Three-->
+	<script src="src/node_modules/three/build/three.js"></script>
+	<script type="module" src="src/node_modules/three/examples/jsm/exporters/GLTFExporter.js"></script>
+	<!-- Orbit Controls -->
+	<script src="src/node_modules/depthkit/examples/lib/OrbitControls.js"></script>
+	<!--DepthKit-->
+	<script src="src/node_modules/depthkit/build/depthkit.js"></script>
+
+	<script src="src/node_modules/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
+
+	<script src="src/node_modules/requirejs/require.js"></script>
+
+	<img src="/src/img/xri.png" id="KSUbanner">
+	
+	<div class="start">
+		<button id="startBtn" style="background-color:#1B75CA">Display Animation</button>
+		<label id="message">Welcome! <br> Please select the DepthKit file you would like to view from the dropdown menu below. <br>Press Display Animation when ready to begin. <br></label>
+		<label for="Select-Files" id="dropdownLabel">Select file to view:</label>
+	<select name="Select-Files" id="DropdownSelect">
+		<option value"null">None</option>
+	</select>
+		<button id="admin">Admin</button>
+	</div>
+
+    <script type="module" src="src/js/DKV.js"></script>
+	

@@ -1,0 +1,126 @@
+{
+    "Files": [
+        {
+            "camPos_x": 0,
+            "camPos_y": 3,
+            "camPos_z": 5,
+            "mp4": "DepthKitFiles/B_K_discuss_update.mp4",
+            "name": "BK_Discuss",
+            "png": "DepthKitFiles/B_K_discuss.png",
+            "pos_x": 0,
+            "pos_y": 6,
+            "pos_z": 5,
+            "rot_x": 143,
+            "rot_y": 0,
+            "rot_z": 0,
+            "scalar": 4,
+            "txt": "DepthKitFiles/B_K_discuss.txt"
+        },
+        {
+            "mp4": "UploadedFiles/Chae_Demo_Upres.mp4",
+            "name": "che",
+            "png": "UploadedFiles/Chae_Demo_Upres.png",
+            "txt": "UploadedFiles/Chae_Demo_Upres.txt"
+        },
+        {
+            "camPos_x": "-0.226834975061191",
+            "camPos_y": "2.6537848682053156",
+            "camPos_z": "4.4184171126102525",
+            "mp4": "UploadedFiles/",
+            "name": "180",
+            "png": "UploadedFiles/",
+            "pos_x": "-1",
+            "pos_y": "2.4",
+            "pos_z": "4.9",
+            "rot_x": "180",
+            "rot_y": "180",
+            "rot_z": "180",
+            "scalar": "0.001",
+            "txt": "UploadedFiles/"
+        },
+        {
+            "name": null
+        },
+        {
+            "name": null
+        },
+        {
+            "name": null
+        },
+        {
+            "name": null
+        },
+        {
+            "name": null
+        },
+        {
+            "name": null
+        },
+        {
+            "name": null
+        },
+        {
+            "name": null
+        },
+        {
+            "name": null
+        },
+        {
+            "name": null
+        },
+        {
+            "name": null
+        },
+        {
+            "name": null
+        },
+        {
+            "camPos_x": "0.6889514534231941",
+            "camPos_y": "3.0000000000000284",
+            "camPos_z": "4.952307128483252",
+            "mp4": "UploadedFiles/B_K_discuss.mp4",
+            "name": "testsd",
+            "png": "UploadedFiles/B_K_discuss.png",
+            "pos_x": "2.969",
+            "pos_y": "1",
+            "pos_z": "3.5",
+            "rot_x": "342",
+            "rot_y": "180",
+            "rot_z": "281",
+            "scalar": "6.7",
+            "txt": "UploadedFiles/B_K_discuss.txt"
+        },
+        {
+            "camPos_x": "1.6909350707162633e-15",
+            "camPos_y": "3.3080327829314102",
+            "camPos_z": "4.801762083553398",
+            "mp4": "UploadedFiles/B_K_discuss.mp4",
+            "name": "sadfads",
+            "png": "UploadedFiles/B_K_discuss.png",
+            "pos_x": "2.657",
+            "pos_y": "0.1",
+            "pos_z": "5.3",
+            "rot_x": "310",
+            "rot_y": "180",
+            "rot_z": "278",
+            "scalar": "4.2",
+            "txt": "UploadedFiles/B_K_discuss.txt"
+        },
+        {
+            "camPos_x": "0.10295413461912174",
+            "camPos_y": "4.149198919210184",
+            "camPos_z": "4.095552316231586",
+            "mp4": "UploadedFiles/B_K_discuss.mp4",
+            "name": "ashton",
+            "png": "UploadedFiles/B_K_discuss.png",
+            "pos_x": "0",
+            "pos_y": "4",
+            "pos_z": "5.3",
+            "rot_x": "336",
+            "rot_y": "180",
+            "rot_z": "262",
+            "scalar": "2.032",
+            "txt": "UploadedFiles/B_K_discuss.txt"
+        }
+    ]
+}
