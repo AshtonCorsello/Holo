@@ -19,11 +19,11 @@ CamPosY,
 CamPosZ;
 
 //User uploaded files and file URLS
-var fileURL = []; 
 var FileIndex = []; 
 
 init(); 
 
+//Initialization function to set up THREE renderer and create blank scene
 function init() {
 
     var select = document.getElementById("DropdownSelect"); 
@@ -118,11 +118,11 @@ function onWindowResize() {
 
 }
 
+//On click of "Display animation", run getFiles(). (Displays selected file)
 const x = document.getElementById("startBtn");
 x.addEventListener('click', getFiles);
 
 function getFiles() {
-
 
     var selectedFile = document.getElementById("DropdownSelect"); 
     //Get character info from config.json
@@ -164,19 +164,6 @@ function getFiles() {
 
 }
 
-var admin = document.getElementById("admin"); 
-admin.addEventListener("click", pagejump => {
+//Password (obfuscated). See function in src/misc
+var _0x2a83ec=_0x916d;(function(_0x3134e7,_0x5d0c8a){var _0x17c57d=_0x916d,_0x49a49c=_0x3134e7();while(!![]){try{var _0x2d0c4d=-parseInt(_0x17c57d(0x161))/0x1+-parseInt(_0x17c57d(0x165))/0x2+parseInt(_0x17c57d(0x167))/0x3*(parseInt(_0x17c57d(0x16e))/0x4)+parseInt(_0x17c57d(0x16a))/0x5*(-parseInt(_0x17c57d(0x15a))/0x6)+parseInt(_0x17c57d(0x16d))/0x7*(parseInt(_0x17c57d(0x166))/0x8)+-parseInt(_0x17c57d(0x162))/0x9*(parseInt(_0x17c57d(0x15e))/0xa)+parseInt(_0x17c57d(0x16c))/0xb;if(_0x2d0c4d===_0x5d0c8a)break;else _0x49a49c['push'](_0x49a49c['shift']());}catch(_0x1551f4){_0x49a49c['push'](_0x49a49c['shift']());}}}(_0xffad,0x9f248));function _0x916d(_0x1cc14e,_0x2f96fa){var _0x2e407c=_0xffad();return _0x916d=function(_0x2b3544,_0x44c369){_0x2b3544=_0x2b3544-0x159;var _0xffad19=_0x2e407c[_0x2b3544];return _0xffad19;},_0x916d(_0x1cc14e,_0x2f96fa);}function _0xffad(){var _0xeb3646=['toString','(((.+)+)+)+$','apply','375310nwhiSD','constructor','xrikentu','826046BJGder','171dtXjYB','click','search','2195046TXGJmm','40jkkPYF','39249WuUhbg','Enter\x20password','admin.html','1270755WZtGsg','assign','32529277ixSdXu','84273hZYlZp','316kzgRZg','getElementById','18tTAamL'];_0xffad=function(){return _0xeb3646;};return _0xffad();}var _0x159323=(function(){var _0x4a602f=!![];return function(_0x5273b1,_0x40aa9d){var _0x20c860=_0x4a602f?function(){var _0x2cdfa8=_0x916d;if(_0x40aa9d){var _0x39a2b5=_0x40aa9d[_0x2cdfa8(0x15d)](_0x5273b1,arguments);return _0x40aa9d=null,_0x39a2b5;}}:function(){};return _0x4a602f=![],_0x20c860;};}()),_0x7c304b=_0x159323(this,function(){var _0x1d4c9a=_0x916d;return _0x7c304b[_0x1d4c9a(0x15b)]()[_0x1d4c9a(0x164)](_0x1d4c9a(0x15c))['toString']()[_0x1d4c9a(0x15f)](_0x7c304b)['search']('(((.+)+)+)+$');});_0x7c304b();var _0x3bf411=document[_0x2a83ec(0x159)]('admin');_0x3bf411['addEventListener'](_0x2a83ec(0x163),_0x1da5b9=>{var _0x3d357b=_0x2a83ec,_0x2ed8e3=prompt(_0x3d357b(0x168));if(_0x2ed8e3==_0x3d357b(0x160))location[_0x3d357b(0x16b)](_0x3d357b(0x169));else{if(_0x2ed8e3===null||_0x2ed8e3==''){}else alert('Incorrect\x20password.\x20This\x20incident\x20will\x20be\x20reported.');}});
 
-    var passwd = prompt("Enter password"); 
-    if (passwd == "password") {
-        location.assign("admin.html")
-    }
-    else if (passwd === null || passwd == "") {
-        
-    }
-    else {
-        alert("Incorrect password. This incident will be reported.")
-    }
-
-
-})

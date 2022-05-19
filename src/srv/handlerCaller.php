@@ -1,10 +1,11 @@
 <?php
 
+  //Write all file data to fileNames.txt and call the json handler with -p argument
   if ($_POST["Function"] == "upload") {
 
-    $testfile = fopen('fileNames.txt','w'); 
+    $fileNames = fopen('fileNames.txt','w'); 
 
-    fwrite($testfile, $_POST["data"]."\n"); 
+    fwrite($fileNames, $_POST["data"]."\n"); 
 
     for ($i = 0; $i < count($_FILES['File']['name']); $i++) {
       $targetDir = "../../UploadedFiles/";
@@ -15,14 +16,15 @@
       $temp_name = $_FILES["File"]["tmp_name"][$i];
       $path_filename_ext = $targetDir.$filename.".".$ext;
       move_uploaded_file($temp_name,$path_filename_ext);
-      fwrite($testfile, $file."\n");
+      fwrite($fileNames, $file."\n");
     }
-    fclose($testfile);  
+    fclose($fileNames);  
 
-    exec("../json/./testhandler -p");
+    exec("../json/./handler -p");
 
   }
 
+  //Write all configuration data to configs.txt and then call the json handler with -s argument on it
   if ($_POST["Function"] == "save") {
 
     $writeToText = fopen("configs.txt", 'w'); 
@@ -31,22 +33,17 @@
 
     fclose($writeToText); 
 
-    exec("../json/./testhandler -s");
+    exec("../json/./handler -s");
   }
 
+  //Call json handler with -d and pass the name of the file as the second argument
   if ($_POST["Function"] == "delete") {
 
     $fileName = "\"".$_POST["File"]."\""; 
 
-    $filePath = "../json/./testhandler -d ".$fileName; 
+    $filePath = "../json/./handler -d ".$fileName; 
 
     exec($filePath); 
   }
-
-
-
-  
-  
-
 
 ?>

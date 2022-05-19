@@ -136,7 +136,6 @@ int File::Add_To_Temp_Config() const{
 
 int Delete_From_Main_Config(std::string FILE_TO_DELETE) {
 
-
     std::fstream in("../json/configMain.json"); 
 
     if(!in.is_open()) {
@@ -144,20 +143,20 @@ int Delete_From_Main_Config(std::string FILE_TO_DELETE) {
         return -1; 
     }
 
-    json j; 
+    json configFile; 
 
-    in >> j; 
+    in >> configFile; 
 
-    int length = j["Files"].size(); 
+    int length = configFile["Files"].size(); 
     for (int i = 0; i < length; i++) {
-        if (j["Files"][i]["name"] == FILE_TO_DELETE) {
-            j["Files"].erase(j["Files"].begin() + i); 
+        if (configFile["Files"][i]["name"] == FILE_TO_DELETE) {
+            configFile["Files"].erase(configFile["Files"].begin() + i); 
         }
     }
 
     in.close(); 
 
-    if(Print_To_Main_Config(j) == -1) {
+    if(Print_To_Main_Config(configFile) == -1) {
         return -1; 
     }
 

@@ -1,7 +1,7 @@
 import {GLTFExporter} from "/src/node_modules/three/examples/jsm/exporters/GLTFExporter.js"
 
 
-//X axis slider stuff
+//X axis slider
 var XaxisSlider = document.getElementById("XaxisSlider");
 var XaxisSliderOutput = document.getElementById("XaxisSliderOutput");
 XaxisSliderOutput.innerHTML = XaxisSlider.value;
@@ -9,7 +9,7 @@ XaxisSlider.oninput = function() {
 XaxisSliderOutput.innerHTML = this.value;
 }
 
-//Y axis slider stuff
+//Y axis slider
 var YaxisSlider = document.getElementById("YaxisSlider");
 var YaxisSliderOutput = document.getElementById("YaxisSliderOutput");
 YaxisSliderOutput.innerHTML = YaxisSlider.value;
@@ -17,7 +17,7 @@ YaxisSlider.oninput = function() {
 YaxisSliderOutput.innerHTML = this.value;
 }
 
-//Z axis slider stuff
+//Z axis slider
 var ZaxisSlider = document.getElementById("ZaxisSlider");
 var ZaxisSliderOutput = document.getElementById("ZaxisSliderOutput");
 ZaxisSliderOutput.innerHTML = ZaxisSlider.value;
@@ -25,7 +25,7 @@ ZaxisSlider.oninput = function() {
 ZaxisSliderOutput.innerHTML = this.value;
 }
 
-//Scalar slider stuff
+//Scalar slider
 var scalarSlider = document.getElementById("scalarSliderr"); 
 var scalarSliderOutput = document.getElementById("scalarSliderOutput"); 
 scalarSliderOutput.innerHTML = scalarSlider.value / 1000;  
@@ -33,7 +33,7 @@ scalarSlider.oninput = function() {
     scalarSliderOutput.innerHTML = this.value / 1000; 
 }
 
-//X pos slider
+//X position slider
 var xposSlider = document.getElementById("xPosSliderr"); 
 var xPosSliderOutput = document.getElementById("xPosSliderOutput"); 
 xPosSliderOutput.innerHTML = xposSlider.value;   
@@ -41,7 +41,7 @@ xposSlider.oninput = function() {
     xPosSliderOutput.innerHTML = this.value; 
 }
 
-//Y pos slider
+//Y position slider
 var yposSlider = document.getElementById("yPosSliderr"); 
 var yPosSliderOutput = document.getElementById("yPosSliderOutput"); 
 yPosSliderOutput.innerHTML = yposSlider.value;   
@@ -49,7 +49,7 @@ yposSlider.oninput = function() {
     yPosSliderOutput.innerHTML = this.value; 
 }
 
-//Z pos slider
+//Z position slider
 var zposSlider = document.getElementById("zPosSliderr"); 
 var zPosSliderOutput = document.getElementById("zPosSliderOutput"); 
 zPosSliderOutput.innerHTML = zposSlider.value;   
@@ -66,17 +66,7 @@ camera,
 controls;
 
 //DepthKit character
-var character,
-xpos,
-ypos,
-zpos,
-xrot,
-yrot,
-zrot,
-scalar,
-CamPosX,
-CamPosY,
-CamPosZ;
+var character
 
 //PHP variables
 var xaxisval,
@@ -90,16 +80,16 @@ camx,
 camy,
 camz;
 
-//User uploaded files and file URLS
-var fileURL = []; 
+//User uploaded files
 var FileIndex = []; 
 
 init(); 
 
 
-
+//Initialization function to set up THREE renderer and create blank scene
 function init() {
 
+    //Gets all files from main config file to be accessible through dropdown
     var select = document.getElementById("DropdownSelect"); 
     fetch("/src/json/configMain.json")
         .then(Response => Response.json())
@@ -115,7 +105,7 @@ function init() {
             } 
         })
 
-    
+    //Setup THREE scene renderer and attach it to html page
     var container = document.getElementById("canvas"); 
     document.body.appendChild( container ); 
     renderer = new THREE.WebGLRenderer();
@@ -189,17 +179,17 @@ function scaleCharacter() {
     character.scale.set(scalarSlider.value / 1000, scalarSlider.value / 1000, scalarSlider.value / 1000); 
 }
 
+//Sliders to move character
 function moveCharacter() {
     character.position.set(xposSlider.value / 10, yposSlider.value / 10, zposSlider.value/10);
 }
 
 
+//Render scene and update character positioning with each frame
 function render() {
 
     requestAnimationFrame( render );
 
-    //Development functions to be used for config purposes only. 
-    
     if (character != null) { 
        rotateCharacter();
        scaleCharacter();  
@@ -218,12 +208,11 @@ function render() {
      camz = camera.position.z; 
 
     
-    
 
     renderer.render( scene, camera );
-
 }
 
+//Change scene size with window resize
 function onWindowResize() {
 
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -232,13 +221,13 @@ function onWindowResize() {
 
 }
 
+//Run getFiles() function on click of "Display Animation" button (displays most recently uploaded file)
 const x = document.getElementById("startBtn");
 x.addEventListener('click', getFiles);
 
 function getFiles() {
 
-
-    //Get character info from config.json 
+    //Get character info from configTmp.json and prepare it to be displayed
     fetch("/src/json/configTmp.json")
         .then(Response => Response.json())
         .then (data => { 
@@ -261,7 +250,9 @@ function getFiles() {
 
 }
 
+//FORM SUBMITS TO PHP
 
+//On click of save button, POST to handlerCaller.php with positioning data and call function "save". 
 $('#save').on('click', function(Save_New) {
     Save_New.preventDefault(); 
     $(this).ajaxSubmit({
@@ -278,6 +269,7 @@ $('#save').on('click', function(Save_New) {
     })
 })
 
+//On click of delete button, require deletion confirmation and then POST to handlerCaller.php with file name and call delete function. 
 $('#Delete').on('click', function(Delete_File) {
     var selectedFileForDeletion = document.getElementById("DropdownSelect"); 
     Delete_File.preventDefault();
@@ -301,6 +293,7 @@ $('#Delete').on('click', function(Delete_File) {
     }
 })
 
+//On click of upload button, POST to handlerCaller.php and call upload function to run. 
 $('#filesub').on('submit', function(Up_To_Server) {
     Up_To_Server.preventDefault(); // prevent native submit
         var name = prompt("Enter name for file"); 
