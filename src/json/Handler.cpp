@@ -1,5 +1,5 @@
 /**
- * @file phpTojsonHandler.cpp
+ * @file Handler.cpp
  * @author Ashton Corsello (ashton.corsello@gmail.com)
  * @brief Handler to link files recieved through PHP to JSON formatting
  * @version 0.1
