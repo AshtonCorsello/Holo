@@ -1,3 +1,3 @@
 # DepthKitOnlineFileSystem
 
-![Webpage example](https://raw.githubusercontent.com/AshtonCorsello/DepthKitOnlineFileSystem/example/webpage.gif)
+![Webpage example](https://raw.githubusercontent.com/AshtonCorsello/DepthKitOnlineFileSystem/master/examples/webpage.gif)
