@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="./viewer/main.css?random=<?= uniqid() ?>'>">
 </head>
 
 <body>
@@ -23,20 +23,40 @@
 	<!--Requirejs-->
 	<script src="/src/node_modules/requirejs/require.js"></script>
 
-	<!--XRI banner-->
-	<img src="/src/img/xri.png" id="KSUbanner">
 	
 	<!--All text and buttons-->
 	<div class="start">
-		<button id="startBtn" style="background-color:#1B75CA">Display Animation</button>
-		<label id="message">Welcome! <br> Please select the DepthKit file you would like to view from the dropdown menu below. <br>Press Display Animation when ready to begin. <br></label>
-		<label for="Select-Files" id="dropdownLabel">Select file to view:</label>
-	<select name="Select-Files" id="DropdownSelect">
-		<option value"null">None</option>
-	</select>
-		<button id="admin">Admin</button>
+		<div id="messageDiv">
+			<label id="message">Welcome! <br> Please select the DepthKit file you would like to view from the dropdown menu below. <br>Press Display Animation when ready to begin. <br></label>
+			<div id="clickArea">
+				<label for="Select-Files" id="dropdownLabel">Select file to view:</label>
+				<select name="Select-Files" id="DropdownSelect">
+					<option value"null">None</option>
+				</select>
+				<div id="startBtndiv">
+					<button id="startBtn" style="background-color:#1B75CA">Display Animation</button>
+				</div>
+			</div>
+		</div>
+		<div id="adminDiv">
+			<button id="admin">Admin</button>
+		</div>	
+		<div id="playPause">
+			play/pause
+		</div>
+		<div id="logo">
+			<img src="/src/img/xri.png" id="KSUbanner">
+		</div>
+		<div id="ARbtn">
+			View in AR
+		</div>
 	</div>
-
 	<!--Main JS script-->
-    <script type="module" src="/src/js/DKV.js"></script>
+    <script type="module" name="main" src="/src/js/DKV.js?random=<?= uniqid() ?>'>"></script>
+ <a data-8code="uve3r" data-icon-vertical></a>
+ 
+ </body>
+
+ </html>
+
 	
